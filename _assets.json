@@ -1,0 +1,5 @@
+{
+  "src": "./public",
+  "dst": "./build/public",
+  "includes": ["./bower_components", "./node_modules"]
+}

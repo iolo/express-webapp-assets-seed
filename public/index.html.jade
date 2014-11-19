@@ -1,0 +1,38 @@
+doctype html
+html(ng-app="app")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible",content="IE=edge")
+        meta(name="viewport",content="width=device-width, initial-scale=1")
+        title Hello
+        link(rel="stylesheet",href="/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet",href="/bootstrap/dist/css/bootstrap-theme.min.css")
+        !=css('/all.min.css')
+        //![if lt IE 9]
+            script(src="/html5shiv/dist/html5shiv.min.js")
+            script(src="/respond/dest/respond.min.js")
+    body
+        #header.navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle.collapsed(type="button",data-toggle="collapse",data-target="#navbar")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href="#") Hello
+                #navbar.navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li: a(href="#/") home
+                        li: a(href="#/view1") view1
+                        li: a(href="#/view2") view2
+
+        #main.container(ng-view)
+
+        #footer.container
+            hr
+            p.text-muted.text-center copyright &copy; 2014 iolothebard. all rights reserved.
+
+        script(src="/angular/angular.min.js")
+        script(src="/angular-route/angular-route.min.js")
+        !=js('/all.min.js')

@@ -1,0 +1,12 @@
+// partials/view1.html.jade
+
+#view1
+    .page-header: h1 view1
+
+    p this is view1
+    p th quick brown fox runs over the lazy dog
+
+    label(for="greetingsText") enter some text
+    input#greetingsText(type="text",ng-model="greetings")
+
+    p {{greetings | capitalize}}
